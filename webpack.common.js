@@ -4,6 +4,7 @@ module.exports = {
     entry: {
         backgroundPage: path.join(__dirname, "src/backgroundPage.ts"),
         popup: path.join(__dirname, "src/popup/index.tsx"),
+        main: path.join(__dirname, "src/main.ts"),
     },
     output: {
         path: path.join(__dirname, "dist/js"),
@@ -22,6 +23,19 @@ module.exports = {
                 use: [
                     "style-loader",
                     "css-loader",
+                    "postcss-loader",
+                ],
+            },
+            {
+                test: /main.css$/,
+                use: [
+                    "style-loader",
+                    {
+                        loader: "css-loader",
+                        options: {
+                            modules: true,
+                        },
+                    },
                     "postcss-loader",
                 ],
             },

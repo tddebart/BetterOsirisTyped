@@ -1,7 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+.dayElement {
+    width: max-content;
+    height: max-content;
+    display:inline-grid;
+}
 
-body {
-    @apply bg-gray-200;
+.dayGrid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
 }
