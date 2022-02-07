@@ -9,3 +9,25 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
 }
+
+.topCalendar {
+    width: max-content;
+    height: max-content;
+    margin: auto;
+}
+.bottomCalendar {
+    border: 1px solid gray;
+}
+
+
+.hour {
+    display: flex;
+}
+.hourText {
+    width: max-content;
+    margin:auto;
+}
+
+.hourDisplay {
+    height: 75px;
+}
