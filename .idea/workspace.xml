@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="000ab57b-89bd-4118-9fa9-0f56efc7a184" name="Changes" comment="calendar layout started">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterOsirisTyped.dir/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterOsirisTyped.dir/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.BetterOsirisTyped.dir/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="000ab57b-89bd-4118-9fa9-0f56efc7a184" name="Changes" comment="calendar background layout done">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.tsx" afterDir="false" />
     </list>
@@ -63,7 +59,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
     <property name="ts.external.directory.path" value="F:\Software_developer\Javascript-HTML\BetterOsirisTyped\node_modules\typescript\lib" />
   </component>
   <component name="RunManager">
@@ -187,7 +183,7 @@
       <updated>1644260443219</updated>
       <workItem from="1644260444368" duration="125000" />
       <workItem from="1644261773130" duration="6854000" />
-      <workItem from="1644335949017" duration="3908000" />
+      <workItem from="1644335949017" duration="13860000" />
     </task>
     <task id="LOCAL-00001" summary="calendar layout started">
       <created>1644269948470</created>
@@ -196,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644269948470</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="calendar background layout done">
+      <created>1644339975563</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1644339975563</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +218,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="calendar layout started" />
-    <option name="LAST_COMMIT_MESSAGE" value="calendar layout started" />
+    <MESSAGE value="calendar background layout done" />
+    <option name="LAST_COMMIT_MESSAGE" value="calendar background layout done" />
   </component>
 </project>

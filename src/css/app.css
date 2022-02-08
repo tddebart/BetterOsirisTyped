@@ -50,7 +50,10 @@
     height: 75px;
 }
 
-
+.part{
+    position: relative;
+    background: red;
+}
 
 
 .frontHourHolder {
@@ -58,4 +61,5 @@
     top: 17px;
     bottom: 0;
     left: 35px;
+    pointer-events: none;
 }
