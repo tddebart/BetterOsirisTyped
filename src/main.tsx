@@ -5,8 +5,13 @@ import "./css/app.css";
 const days = ["maandag", "dinsdag", "woensdag", "donderdag", "vrijdag"]
 const hours : Array<string> = []
 for (let i = 9; i < 18; i++) {
-    hours.push(i + ":00")
-    hours.push(i + ":30")
+    if(i == 9) {
+        hours.push(`0${i}:00`)
+        hours.push(`0${i}:30`)
+    } else {
+        hours.push(i + ":00")
+        hours.push(i + ":30")
+    }
 }
 
 // document.body.style.border = "5px solid red";
@@ -60,34 +65,53 @@ function changed () {
     //     }
     // }
     render.push(<Calendar/>);
+    render.push(<Hours dates={[]}/>)
     ReactDOM.render(render, calendar.getElementsByClassName("fill-width fill-height")[0]);
 }
 
 const Calendar = () => {
     return (
         <>
-            <div style={{display: "flex"}}>
-                {days.map(day => <div key={"top"+day} className="topCalendar">{day}</div>)}
+            <div style={{display:"flex"}}>
+                <div style={{width: "35px"}}/>
+                <div style={{display: "flex"}}>
+                    {days.map(day => <div key={"top"+day} className="topCalendar">{day}</div>)}
+                </div>
             </div>
-            <div style={{display: "flex", height: "100%"}}>
-                {days.map(day => <div key={"bottom"+day} className="bottomCalendar">{
-                    hours.map(hour =>
-                    <div className="hour" key={day+hour}>
-                        <div key={day+hour+"text"} className="hourText">{hour}</div>
-                        <div key={day+hour+"display"} className="hourDisplay"/>
-                    </div>)
-                }</div>)}
+            <div style={{height: "100%", overflow: "scroll", display: "flex"}}>
+                <div className="leftHours">
+                    {
+                        hours.map(hour =>
+                        <div className="hour" key={hour}>
+                            <div key={hour+"text"} className="hourText">{hour}</div>
+                        </div>)
+                    }
+                </div>
+                <div className="rightHours">
+                    {
+                        days.map(day =>
+                            <div className={"dayContainer"}>
+                                {
+                                    hours.map(hour =>
+                                        <div className="hourContainer"/>
+                                    )
+                                }
+                            </div>
+                        )
+                    }
+                </div>
+                {/*{days.map(day => <div key={"bottom"+day} className="bottomCalendar">{}</div>)}*/}
             </div>
         </>
     )
 }
 
-const DateElement = (props : {dates : string[]}) => {
+const Hours = (props : {dates : string[]}) => {
     return (
-        <div className="dayElement">
-            {props.dates.map((date : string) =>
-                <div>{date}</div>
-            )}
-        </div>
+        <>
+            <div className={"frontHourHolder"}>
+
+            </div>
+        </>
     )
 }

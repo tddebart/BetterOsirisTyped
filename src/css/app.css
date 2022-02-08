@@ -16,18 +16,46 @@
     margin: auto;
 }
 .bottomCalendar {
-    border: 1px solid gray;
+    /*border: 1px solid gray;*/
+    height: fit-content;
 }
 
 
 .hour {
     display: flex;
+    position: relative;
+    height:75px;
+    width: 35px;
 }
 .hourText {
     width: max-content;
-    margin:auto;
+    position: absolute;
+    bottom: -8px;
 }
 
-.hourDisplay {
+.leftHours {
+    width:fit-content;
+}
+.rightHours {
+    display: flex;
+}
+
+.dayContainer {
+    border-left: 1px solid gray;
+    height: fit-content;
+}
+
+.hourContainer {
+    border-top: 1px solid gray;
     height: 75px;
+}
+
+
+
+
+.frontHourHolder {
+    position:absolute;
+    top: 17px;
+    bottom: 0;
+    left: 35px;
 }

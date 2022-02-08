@@ -10,7 +10,8 @@
         "lint": "eslint --fix -c ./.eslintrc.js \"src/**/*.ts*\"",
         "prettify": "prettier --write \"src/**/*.ts*\"",
         "storybook": "start-storybook -p 6006",
-        "build-storybook": "build-storybook"
+        "build-storybook": "build-storybook",
+        "debug": "web-ext run --firefox-profile=custom-profile --keep-profile-changes"
     },
     "repository": {
         "type": "git",
