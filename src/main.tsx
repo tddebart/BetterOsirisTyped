@@ -24,6 +24,10 @@ setTimeout(function () {
 
 }, 1000)
 
+setInterval(function () {
+    UpdateTimeBar();
+}, 10000)
+
 setTimeout(function () {
     changed()
 }, 3000)
@@ -62,6 +66,7 @@ function changed () {
     dates.pop()
     ReactDOM.render(<Calendar/>, calendar.getElementsByClassName("fill-width fill-height")[0]);
     let parent = calendar.getElementsByClassName("rightHours")[0]
+    UpdateTimeBar();
 
     var dayIndex = 0;
     for (let i = 0; i < dates.length; i++) {
@@ -99,7 +104,7 @@ function changed () {
                     part.className = "part"
                     part.style.top =  d1.getMinutes()*2.5 + "px";
                     part.style.height = (diffHour * 75*2) + (diffMin * 2.5) + "px"
-
+                    part.innerText = name + "\n" + docent + "\n" + room
 
 
                     parent.children[dayIndex].children[(d1.getHours()-9)*2+1].appendChild(part)
@@ -142,10 +147,19 @@ const Calendar = () => {
                             </div>
                         )
                     }
+                    <div className="timeBar"></div>
                 </div>
             </div>
         </>
     )
+}
+
+function UpdateTimeBar() {
+    // update time bar
+    let timeBar = document.getElementsByClassName("timeBar")[0] as HTMLElement;
+    if(timeBar == undefined) return;
+    let d = new Date()
+    timeBar.style.bottom = `${1350 - ((d.getHours() - 8 +1) * 75 + (d.getMinutes()*2.5  ))}px`
 }
 
 function clearPrevious(calendar: Element) {
@@ -155,7 +169,7 @@ function clearPrevious(calendar: Element) {
             let child = parent.children[i]
             for (let j = 0; j < child.children.length; j++) {
                 let child2 = child.children[j]
-                child2.innerHTML = ""
+                child2.innerHTML = "";
             }
         }
     }

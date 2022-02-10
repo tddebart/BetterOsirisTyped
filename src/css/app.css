@@ -38,11 +38,13 @@
 }
 .rightHours {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .dayContainer {
     border-left: 1px solid gray;
     height: fit-content;
+    width:20%;
 }
 
 .hourContainer {
@@ -53,6 +55,15 @@
 .part{
     position: relative;
     background: red;
+    text-align: center;
+}
+
+.timeBar {
+    height:5px;
+    position: relative;
+    background: black;
+    left: 0;
+    right:0;
 }
 
 
